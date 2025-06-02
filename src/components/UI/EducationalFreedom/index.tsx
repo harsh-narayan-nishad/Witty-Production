@@ -66,7 +66,20 @@ const FinancialFreedom = () => {
             viewport={{ amount: 0.25, once: true }}
           >
             {isMobile ? (
-              <Image src={freedom_mobile_banner} alt="banner_img" fill />
+              <video
+              ref={videoRef}
+              src="/images/big_banner.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                borderRadius: 'inherit',
+              }}
+            />
             ) : (
               // <Image src={financial_freedom_banner} alt="banner_img" fill />
               <video

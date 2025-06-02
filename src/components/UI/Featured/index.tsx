@@ -123,11 +123,20 @@ const Featured = () => {
             viewport={{ amount: 0.25, once: true }}
           >
             {isMobile ? (
-              <Image
-                src={featured_mobile_banner}
-                alt="featured_mobile_banner"
-                fill
-              />
+               <video
+               ref={videoRef}
+               src="/images/big_banner1.mp4"
+               autoPlay
+               muted
+               loop
+               playsInline
+               style={{
+                 width: '100%',
+                 height: '100%',
+                 objectFit: 'cover',
+                 borderRadius: 'inherit',
+               }}
+             />
             ) : (
               <video
                 ref={videoRef}
